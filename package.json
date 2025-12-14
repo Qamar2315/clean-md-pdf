@@ -14,8 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "clean-md-pdf.helloWorld",
-        "title": "Hello World"
+        "command": "clean-md-pdf.convert",
+        "title": "Convert Markdown to PDF (Clean)"
       }
     ]
   },
@@ -28,13 +28,18 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.107.0",
+    "@types/markdown-it": "^14.1.2",
     "@types/mocha": "^10.0.10",
     "@types/node": "22.x",
-    "typescript-eslint": "^8.48.1",
+    "@types/vscode": "^1.107.0",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
     "eslint": "^9.39.1",
     "typescript": "^5.9.3",
-    "@vscode/test-cli": "^0.0.12",
-    "@vscode/test-electron": "^2.5.2"
+    "typescript-eslint": "^8.48.1"
+  },
+  "dependencies": {
+    "markdown-it": "^14.1.0",
+    "puppeteer": "^24.33.0"
   }
 }
