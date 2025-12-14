@@ -109,13 +109,18 @@ export function activate(context: vscode.ExtensionContext) {
                     h1, h2, h3, h4, h5, h6 {
                         margin-top: 24px;
                         margin-bottom: 16px;
-                        font-weight: 600;
+                        font-weight: 700 !important;
                         line-height: 1.25;
                         page-break-after: avoid;
+                        color: #000000 !important;
+                    }
+
+                    h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
+                        color: #000000 !important;
                     }
 
                     h1 {
-                        font-size: 2em;
+                        font-size: 2.5em;
                         border-bottom: 2px solid #e1e4e8;
                         padding-bottom: 0.3em;
                         margin-top: 0;
@@ -123,14 +128,14 @@ export function activate(context: vscode.ExtensionContext) {
                     }
 
                     h2 {
-                        font-size: 1.5em;
+                        font-size: 1.8em;
                         border-bottom: 1px solid #e1e4e8;
                         padding-bottom: 0.3em;
                         letter-spacing: -0.3px;
                     }
 
                     h3 {
-                        font-size: 1.25em;
+                        font-size: 1.4em;
                     }
 
                     /* Better paragraph spacing */
