@@ -1,71 +1,152 @@
-# clean-md-pdf README
+# Clean MD to PDF
 
-This is the README for your extension "clean-md-pdf". After writing up a brief description, we recommend including the following sections.
+Convert Markdown files to beautiful, professional PDFs without any watermarks or footers. This VS Code extension produces clean, publication-ready PDFs with GitHub-style formatting, syntax highlighting, and professional typography.
 
-## Features
+## ✨ Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **🚫 No Watermarks**: Clean PDF output without any unwanted headers, footers, or watermarks
+- **🎨 Syntax Highlighting**: Colorful code blocks using highlight.js with GitHub theme
+- **📐 Professional Typography**: Modern font stack with perfect spacing and readability
+- **📊 Enhanced Tables**: Beautiful tables with alternating row colors and clean borders
+- **📑 Auto Table of Contents**: Automatically generated from your document headings
+- **📄 Page Headers**: Document title and page numbers at the top of each page
+- **🔗 Smart Links**: Enhanced link styling with automatic URL printing for PDFs
+- **📖 Page Break Control**: Intelligent page breaks that keep content together
+- **🎯 Bold Headings**: Large, bold, black headings that stand out clearly
 
-For example if there is an image subfolder under your extension project workspace:
+## 📋 Requirements
 
-\!\[feature X\]\(images/feature-x.png\)
+- VS Code 1.107.0 or higher
+- The extension automatically downloads required dependencies (markdown-it, puppeteer)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## 🚀 Installation
 
-## Requirements
+### Option 1: Install from VSIX (Recommended)
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+1. Download or build the `.vsix` file
+2. In VS Code, press `Ctrl+Shift+P` (or `Cmd+Shift+P` on Mac)
+3. Type: **"Extensions: Install from VSIX..."**
+4. Select the `.vsix` file
+5. Reload VS Code
 
-## Extension Settings
+### Option 2: Build from Source
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+```bash
+# Clone or navigate to the project directory
+cd clean-md-pdf
 
-For example:
+# Install dependencies
+npm install
 
-This extension contributes the following settings:
+# Compile the extension
+npm run compile
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+# Package the extension
+npm install -g @vscode/vsce
+vsce package
 
-## Known Issues
+# Install the generated .vsix file as shown in Option 1
+```
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## 📖 Usage
 
-## Release Notes
+1. Open any Markdown (`.md`) file in VS Code
+2. Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on Mac)
+3. Type: **"Convert Markdown to PDF (Clean)"**
+4. Press Enter
+5. The PDF will be created in the same folder as your Markdown file
 
-Users appreciate release notes as you update your extension.
+## 🎨 What You Get
 
-### 1.0.0
+### Professional Styling
+- **GitHub-inspired design** with modern, clean aesthetics
+- **System fonts** for native look and feel
+- **Proper hierarchy** with distinct heading sizes (H1: 2.5em, H2: 1.8em, H3: 1.4em)
+- **Bold black headings** (font-weight: 700) for maximum visibility
 
-Initial release of ...
+### Enhanced Content
+- **Code blocks** with syntax highlighting in 180+ languages
+- **Tables** with header styling, borders, and alternating row colors
+- **Blockquotes** with left border and background color
+- **Images** with rounded corners and drop shadows
+- **Links** styled with color and underlines, URLs printed in PDF
 
-### 1.0.1
+### Smart Layout
+- **Table of Contents** auto-generated from H1, H2, H3 headings
+- **Page headers** with document title and page numbers
+- **No broken content** - headings, code blocks, tables, and images stay together
+- **Perfect margins** - 2.5cm top, 2cm sides and bottom
 
-Fixed issue #.
+## 🛠️ Extension Settings
 
-### 1.1.0
+This extension does not add any VS Code settings. It works out of the box with sensible defaults.
 
-Added features X, Y, and Z.
+## 📝 Example Markdown
+
+```markdown
+# My Document
+
+This is a comprehensive example with all supported features.
+
+## Introduction
+
+Welcome to the **Clean MD to PDF** extension!
+
+## Code Example
+
+```javascript
+function hello(name) {
+    console.log(`Hello, ${name}!`);
+}
+\```
+
+## Data Table
+
+| Feature | Status | Priority |
+|---------|--------|----------|
+| Syntax Highlighting | ✅ Done | High |
+| Tables | ✅ Done | Medium |
+| TOC | ✅ Done | Medium |
+
+## Links
+
+Visit [GitHub](https://github.com) for more information.
+
+> **Note**: This is an enhanced blockquote!
+\```
+
+## 🐛 Known Issues
+
+- Page headers (`@top-center`, `@top-right`) may not render in all PDF viewers due to limited CSS Paged Media support
+- If Puppeteer fails to download Chromium, you may need to set the `PUPPETEER_SKIP_CHROMIUM_DOWNLOAD` environment variable
+
+## 📅 Release Notes
+
+### 0.0.1 (Initial Release)
+
+- ✅ Clean PDF conversion without watermarks
+- ✅ Syntax highlighting for code blocks
+- ✅ Professional typography and spacing
+- ✅ Enhanced table styling
+- ✅ Auto-generated table of contents
+- ✅ Page headers with title and page numbers
+- ✅ Smart page break controls
+- ✅ Bold, black, large headings
+
+## 🤝 Contributing
+
+Feel free to submit issues and enhancement requests!
+
+## 📄 License
+
+[Your License Here]
+
+## 🙏 Acknowledgments
+
+- Built with [markdown-it](https://github.com/markdown-it/markdown-it)
+- PDF generation powered by [Puppeteer](https://pptr.dev/)
+- Syntax highlighting by [highlight.js](https://highlightjs.org/)
 
 ---
 
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+**Enjoy creating beautiful, clean PDFs!** 🎉
