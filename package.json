@@ -1,8 +1,32 @@
 {
   "name": "clean-md-pdf",
-  "displayName": "clean-md-pdf",
-  "description": "Convert MD to PDF without watermarks",
+  "displayName": "Clean MD to PDF",
+  "description": "Convert Markdown to beautiful, professional PDFs without watermarks",
   "version": "0.0.1",
+  "publisher": "your-publisher-name",
+  "author": {
+    "name": "Qamar Islam",
+    "url": "https://github.com/Qamar2315"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Qamar2315/clean-md-pdf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Qamar2315/clean-md-pdf/issues"
+  },
+  "homepage": "https://github.com/Qamar2315/clean-md-pdf#readme",
+  "icon": "icon.png",
+  "keywords": [
+    "markdown",
+    "pdf",
+    "converter",
+    "export",
+    "clean",
+    "no-watermark",
+    "syntax-highlighting"
+  ],
   "engines": {
     "vscode": "^1.107.0"
   },
