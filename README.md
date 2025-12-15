@@ -81,44 +81,10 @@ vsce package
 
 This extension does not add any VS Code settings. It works out of the box with sensible defaults.
 
-## 📝 Example Markdown
-
-```markdown
-# My Document
-
-This is a comprehensive example with all supported features.
-
-## Introduction
-
-Welcome to the **Clean MD to PDF** extension!
-
-## Code Example
-
-```javascript
-function hello(name) {
-    console.log(`Hello, ${name}!`);
-}
-\```
-
-## Data Table
-
-| Feature | Status | Priority |
-|---------|--------|----------|
-| Syntax Highlighting | ✅ Done | High |
-| Tables | ✅ Done | Medium |
-| TOC | ✅ Done | Medium |
-
-## Links
-
-Visit [GitHub](https://github.com) for more information.
-
-> **Note**: This is an enhanced blockquote!
-\```
-
 ## 🐛 Known Issues
 
 - Page headers (`@top-center`, `@top-right`) may not render in all PDF viewers due to limited CSS Paged Media support
-- If Puppeteer fails to download Chromium, you may need to set the `PUPPETEER_SKIP_CHROMIUM_DOWNLOAD` environment variable
+- If Puppeteer fails to download Chromium, you may need to manually install it or set environment variables
 
 ## 📅 Release Notes
 
@@ -135,11 +101,14 @@ Visit [GitHub](https://github.com) for more information.
 
 ## 🤝 Contributing
 
-Feel free to submit issues and enhancement requests!
+Contributions are welcome! Feel free to:
+- Report bugs
+- Suggest new features
+- Submit pull requests
 
 ## 📄 License
 
-[Your License Here]
+MIT License - feel free to use this extension in your projects!
 
 ## 🙏 Acknowledgments
 
