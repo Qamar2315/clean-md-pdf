@@ -2,7 +2,7 @@
   "name": "clean-md-pdf",
   "displayName": "Clean MD to PDF",
   "description": "Convert Markdown to beautiful, professional PDFs without watermarks",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "Qamar2315",
   "author": {
     "name": "Qamar Islam",
@@ -40,8 +40,78 @@
       {
         "command": "clean-md-pdf.convert",
         "title": "Convert Markdown to PDF (Clean)"
+      },
+      {
+        "command": "clean-md-pdf.convertFromExplorer",
+        "title": "Convert to PDF (Clean)"
       }
-    ]
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "when": "resourceExtname == .md",
+          "command": "clean-md-pdf.convertFromExplorer",
+          "group": "navigation"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "clean-md-pdf.convert",
+        "key": "ctrl+shift+m",
+        "mac": "cmd+shift+m",
+        "when": "editorLangId == markdown"
+      }
+    ],
+    "configuration": {
+      "title": "Clean MD to PDF",
+      "properties": {
+        "clean-md-pdf.outputFolder": {
+          "type": "string",
+          "default": "",
+          "description": "Custom output folder for PDFs (relative to workspace or absolute path). Leave empty to save in same folder as source file."
+        },
+        "clean-md-pdf.pageSize": {
+          "type": "string",
+          "enum": [
+            "A4",
+            "Letter",
+            "Legal"
+          ],
+          "default": "A4",
+          "description": "PDF page size"
+        },
+        "clean-md-pdf.includeTOC": {
+          "type": "boolean",
+          "default": true,
+          "description": "Include Table of Contents in the PDF"
+        },
+        "clean-md-pdf.theme": {
+          "type": "string",
+          "enum": [
+            "github",
+            "academic",
+            "modern",
+            "minimal",
+            "dark"
+          ],
+          "default": "github",
+          "enumDescriptions": [
+            "GitHub - Clean, modern, professional style",
+            "Academic - Serif fonts, formal styling for research papers",
+            "Modern - Vibrant colors, contemporary design",
+            "Minimal - Simple, clean, minimal styling",
+            "Dark - Dark mode with light text on dark background"
+          ],
+          "description": "PDF theme/styling"
+        },
+        "clean-md-pdf.openAfterConversion": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically open the PDF after conversion"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
