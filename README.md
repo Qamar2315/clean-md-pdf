@@ -1,15 +1,25 @@
-# Clean MD to PDF
+# Clean MD to Multi-Format
 
-Convert Markdown files to beautiful, professional PDFs without any watermarks or footers. This VS Code extension produces clean, publication-ready PDFs with **5 stunning themes**, configurable settings, and powerful batch conversion features.
+Convert Markdown files to beautiful PDFs, HTML, and Word documents without any watermarks. This VS Code extension produces clean, publication-ready output with **10 stunning themes**, multiple export formats, and powerful batch conversion features.
 
 ## ✨ Key Features
 
-### 🎨 **5 Professional Themes**
+### 🎨 **10 Professional Themes**
 - **GitHub** - Clean, modern, professional (default)
 - **Academic** - Serif fonts, formal styling for research papers
 - **Modern** - Vibrant gradients, contemporary design
 - **Minimal** - Simple, clean, distraction-free
 - **Dark** - Dark mode with light text on dark background
+- **Elegant** - Professional serif with gold accents
+- **Tech** - Terminal-inspired monospace design
+- **Corporate** - Business blue professional theme
+- **Nature** - Eco-friendly green theme
+- **Vibrant** - Colorful multi-gradient design
+
+### 📤 **Multi-Format Export**
+- **PDF** - Professional PDFs with all 10 themes
+- **HTML** - Web-ready HTML (standalone or with separate CSS)
+- **Word/DOCX** - Editable Microsoft Word documents
 
 ### ⚙️ **Powerful Configuration**
 - **Custom output folders** - Save PDFs anywhere you want
@@ -19,6 +29,7 @@ Convert Markdown files to beautiful, professional PDFs without any watermarks or
 - **Keyboard shortcuts** - `Ctrl+Shift+M` for quick conversion
 
 ### 🚀 **Productivity Features**
+- **Format picker** - Choose PDF, HTML, or DOCX from visual menu
 - **Right-click context menu** - Convert from Explorer
 - **Batch conversion** - Select and convert multiple files at once
 - **Progress tracking** - See conversion steps in real-time
@@ -44,10 +55,22 @@ Convert Markdown files to beautiful, professional PDFs without any watermarks or
 3. Reload VS Code if needed
 
 ### Basic Usage
+
+**Quick PDF Export:**
 1. Open any Markdown (`.md`) file
 2. **Option A**: Press `Ctrl+Shift+M` (Mac: `Cmd+Shift+M`)
 3. **Option B**: Right-click file in Explorer → "Convert to PDF (Clean)"
 4. **Option C**: Command Palette (`Ctrl+Shift+P`) → "Convert Markdown to PDF (Clean)"
+
+**Multi-Format Export:**
+1. Open a Markdown file or right-click in Explorer
+2. Command Palette → "Convert Markdown (Choose Format)"
+3. Select format: 📄 PDF, 🌐 HTML, or 📝 Word/DOCX
+4. File exports automatically!
+
+**Direct Format Export:**
+- HTML: Command Palette → "Convert Markdown to HTML (Clean)"
+- Word: Command Palette → "Convert Markdown to Word/DOCX (Clean)"
 
 ## ⚙️ Configuration
 
@@ -64,10 +87,11 @@ Access settings via `File > Preferences > Settings` and search for "Clean MD to 
   // Include table of contents
   "clean-md-pdf.includeTOC": true,
   
-  // Choose theme: "github", "academic", "modern", "minimal", or "dark"
+  // Choose theme: "github", "academic", "modern", "minimal", "dark",
+  // "elegant", "tech", "corporate", "nature", or "vibrant"
   "clean-md-pdf.theme": "github",
   
-  // Auto-open PDF after conversion
+  // Auto-open file after conversion
   "clean-md-pdf.openAfterConversion": false
 }
 ```
@@ -112,6 +136,21 @@ Simple, clean, distraction-free design with minimal styling. Perfect for drafts 
 
 ### Dark Theme
 Dark background with light text, perfect for dark mode lovers and reducing eye strain when viewing PDFs at night.
+
+### Elegant Theme
+Professional serif design with gold (#D4AF37) accents and cream backgrounds. Features Garamond fonts, double borders, and ornamental styling. Perfect for formal reports, executive summaries, and elegant presentations.
+
+### Tech Theme  
+Terminal-inspired green (#00FF00) on black design with monospace fonts (Fira Code, Consolas). Features command-line aesthetics with bracket notation and terminal colors. Ideal for developer documentation, API references, and technical specs.
+
+### Corporate Theme
+Business-focused navy blue (#003366) professional theme with clean typography (Calibri, Arial). Features gradient headers and structured layouts. Perfect for business proposals, corporate reports, and professional documentation.
+
+### Nature Theme
+Eco-friendly green theme with organic styling and natural color palette. Features Open Sans fonts and earth tones. Great for environmental reports, sustainability docs, and nature-focused content.
+
+### Vibrant Theme
+Colorful multi-gradient design with rainbow colors and energetic styling. Features Poppins fonts and dynamic gradients (red, cyan, yellow). Perfect for creative briefs, marketing materials, and presentations.
 
 ## 📖 Advanced Features
 
@@ -158,7 +197,17 @@ vsce package
 
 ## 📅 Release Notes
 
-### 0.0.2 (Latest)
+### 0.0.3 (Latest)
+- ✅ **10 professional themes** (5 new: Elegant, Tech, Corporate, Nature, Vibrant)
+- ✅ **Multi-format export** - PDF, HTML, and Word/DOCX
+- ✅ **HTML export** with standalone or linked CSS options
+- ✅ **Word/DOCX export** with full styling support
+- ✅ **Format picker** with visual icons for easy selection
+- ✅ **New commands** for direct HTML and Word export
+- ✅ **All themes work** across all export formats
+- ✅ **Enhanced documentation** with complete feature descriptions
+
+### 0.0.2
 - ✅ **5 professional themes** (GitHub, Academic, Modern, Minimal, Dark)
 - ✅ **Configuration system** with 5 customizable settings
 - ✅ **Right-click context menu** for Explorer

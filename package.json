@@ -2,7 +2,7 @@
   "name": "clean-md-pdf",
   "displayName": "Clean MD to PDF",
   "description": "Convert Markdown to beautiful, professional PDFs without watermarks",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "Qamar2315",
   "author": {
     "name": "Qamar Islam",
@@ -44,6 +44,18 @@
       {
         "command": "clean-md-pdf.convertFromExplorer",
         "title": "Convert to PDF (Clean)"
+      },
+      {
+        "command": "clean-md-pdf.convertToHTML",
+        "title": "Convert Markdown to HTML (Clean)"
+      },
+      {
+        "command": "clean-md-pdf.convertToWord",
+        "title": "Convert Markdown to Word/DOCX (Clean)"
+      },
+      {
+        "command": "clean-md-pdf.convertWithFormatPicker",
+        "title": "Convert Markdown (Choose Format)"
       }
     ],
     "menus": {
@@ -143,6 +155,7 @@
     "typescript-eslint": "^8.48.1"
   },
   "dependencies": {
+    "docx": "^8.5.0",
     "markdown-it": "^14.1.0",
     "puppeteer": "^24.33.0"
   }
