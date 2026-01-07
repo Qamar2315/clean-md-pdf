@@ -93,7 +93,12 @@
             "academic",
             "modern",
             "minimal",
-            "dark"
+            "dark",
+            "elegant",
+            "tech",
+            "corporate",
+            "nature",
+            "vibrant"
           ],
           "default": "github",
           "enumDescriptions": [
@@ -101,7 +106,12 @@
             "Academic - Serif fonts, formal styling for research papers",
             "Modern - Vibrant colors, contemporary design",
             "Minimal - Simple, clean, minimal styling",
-            "Dark - Dark mode with light text on dark background"
+            "Dark - Dark mode with light text on dark background",
+            "Elegant - Professional serif with gold accents",
+            "Tech - Terminal-inspired monospace design",
+            "Corporate - Business blue professional theme",
+            "Nature - Eco-friendly green theme",
+            "Vibrant - Colorful multi-gradient design"
           ],
           "description": "PDF theme/styling"
         },

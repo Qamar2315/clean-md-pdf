@@ -1,4 +1,4 @@
-export type ThemeName = 'github' | 'academic' | 'modern' | 'minimal' | 'dark';
+export type ThemeName = 'github' | 'academic' | 'modern' | 'minimal' | 'dark' | 'elegant' | 'tech' | 'corporate' | 'nature' | 'vibrant';
 
 export function getThemeCSS(theme: ThemeName, docTitle: string): string {
     const themes = {
@@ -6,7 +6,12 @@ export function getThemeCSS(theme: ThemeName, docTitle: string): string {
         academic: getAcademicTheme(docTitle),
         modern: getModernTheme(docTitle),
         minimal: getMinimalTheme(docTitle),
-        dark: getDarkTheme(docTitle)
+        dark: getDarkTheme(docTitle),
+        elegant: getElegantTheme(docTitle),
+        tech: getTechTheme(docTitle),
+        corporate: getCorporateTheme(docTitle),
+        nature: getNatureTheme(docTitle),
+        vibrant: getVibrantTheme(docTitle)
     };
 
     return themes[theme] || themes.github;
@@ -990,5 +995,43 @@ function getDarkTheme(docTitle: string): string {
         .toc-indent-2 {
             padding-left: 40px;
         }
+    `;
+}
+
+
+
+
+function getElegantTheme(docTitle: string): string {
+    return `
+        body { font-family: Garamond, serif; color: #2C2416; background: #FFFEF9; }
+        h1 { font-size: 28pt; color: #8B6914; border-top: 3px double #D4AF37; border-bottom: 3px double #D4AF37; }
+    `;
+}
+
+function getTechTheme(docTitle: string): string {
+    return `
+        body { font-family: monospace; color: #00FF00; background-color: #0A0E14; }
+        h1 { font-size: 24px; color: #00FF00; border: 2px solid #00FF00; }
+    `;
+}
+
+function getCorporateTheme(docTitle: string): string {
+    return `
+        body { font-family: Calibri, Arial, sans-serif; color: #1A1A1A; }
+        h1 { background: linear-gradient(135deg, #003366, #0066CC); color: #FFFFFF; }
+    `;
+}
+
+function getNatureTheme(docTitle: string): string {
+    return `
+        body { font-family: "Open Sans", sans-serif; color: #1B3A1B; background: #F8FFF8; }
+        h1 { background: linear-gradient(135deg, #228B22, #32CD32); color: #FFFFFF; }
+    `;
+}
+
+function getVibrantTheme(docTitle: string): string {
+    return `
+        body { font-family: Poppins, sans-serif; color: #2D3436; }
+        h1 { background: linear-gradient(135deg, #FF6B6B, #4ECDC4, #FFD93D); color: #FFFFFF; }
     `;
 }
